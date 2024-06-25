@@ -4,7 +4,9 @@
 
 
 @if (session()->has('msg'))
-    <p>{{session('msg')}}</p>
+  <div class="alert alert-success" role="alert">
+    {{session('msg')}}
+  </div>
 @endif
 <table class="table table-striped">
     <thead>
@@ -67,7 +69,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Deseja exluir ?</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Deseja excluir ?</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">

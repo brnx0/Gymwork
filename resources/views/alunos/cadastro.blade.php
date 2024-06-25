@@ -1,10 +1,8 @@
 @extends('layout.main')
 @section('title', 'Cadastro - Alunos')
 @section('content')
-  
-    @if (session()->has('msg'))
-        <p>{{session('msg')}}</p>
-    @endif
+    
+   
         <form action="/cadastro/alunos" method="post">
             @csrf
             
