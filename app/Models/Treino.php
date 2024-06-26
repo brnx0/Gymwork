@@ -8,12 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Treino extends Model{
     use HasFactory;
     public $timestamps = false;
-    protected function cast():array{
+
+    
+    protected function casts(): array{
         return [
             'treinoA' => 'array',
             'treinoB' => 'array',
             'treinoC' => 'array'
         ];
     }
+
+    
 
 }

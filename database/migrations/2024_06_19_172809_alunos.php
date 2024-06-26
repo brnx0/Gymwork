@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void{ 
     
         Schema::create('alunos', function (Blueprint $table) {
-            $table->increments('id')->primary();
+            $table->bigIncrements('id')->primary();
             $table->string('nome');
             $table->string('tel');
             $table->string('cep');

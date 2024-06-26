@@ -6,19 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        //
+    public function up(): void{
+        Schema::create('treinos', function (Blueprint $table) {
+            $table->bigIncrements('idTreinos')->primary();
+            $table->foreignId('idAluno')->references('id')->on('alunos');
+            $table->json('treinoA')->nullable();
+            $table->json('treinoB')->nullable();
+            $table->json('treinoC')->nullable();
+            
+        });
     }
 
     /**
      * Reverse the migrations.
      */
-    public function down(): void
-    {
+    public function down(): void {
+        Schema::dropIfExists('treinos');
         //
     }
 };
