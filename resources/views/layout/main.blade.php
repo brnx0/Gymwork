@@ -32,6 +32,9 @@
                       </ul>
                     </li>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/treino">Criar Treino </a>
+                  </li>
                 </ul>
               </div>
             </div>
