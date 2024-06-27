@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\pdfController;
 use App\Http\Controllers\TreinoController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,8 @@ Route::post('/cadastro/alunos', [AlunoController::class, 'store']);
 
 Route::get('/treino', [TreinoController::class, 'show']);
 Route::post('/treino', [TreinoController::class, 'store']);
+
+Route::get('/consultar', function () {return view('treino.consultarTreino');});
+Route::post('/consultar', [TreinoController::class, 'consultarTreino']);
+
+Route::get('/treino/imprimir/{aluno}/{treino}', [TreinoController::class, 'imprimirTreino']);

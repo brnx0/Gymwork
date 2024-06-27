@@ -13,7 +13,8 @@ return new class extends Migration
     
         Schema::create('alunos', function (Blueprint $table) {
             $table->bigIncrements('id')->primary();
-            $table->string('nome');
+            $table->string('cpf')->nullable()->unique();
+            $table->string('nome')->nullable();
             $table->string('tel');
             $table->string('cep');
             

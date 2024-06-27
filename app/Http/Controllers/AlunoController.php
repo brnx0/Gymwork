@@ -13,7 +13,8 @@ class AlunoController extends Controller
 
     public function store(Request $request){
         $aluno = new Alunos();
-        $aluno->nome = $request->name;
+        $aluno->nome = $request->nome;
+        $aluno->cpf = $request->cpf;
         $aluno->tel = $request->tel;
         $aluno->cep = $request->cep;
         $aluno->save();
