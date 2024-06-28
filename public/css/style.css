@@ -1,0 +1,56 @@
+.bgColor{
+    background: #c3c3c3;
+}
+.navBar{
+    padding-left: 10px;
+}
+.conteudo{
+    
+}
+form p {
+    margin-bottom: 0px;
+}
+/*Criar Treino*/
+
+#aluno{
+    width: 20%;
+}
+
+/*Buscar Treino*/
+#buscar{
+    height: 33px;
+    border-radius: 56px;
+    
+    font-size: 24px;
+    
+}
+#buscar::placeholder{
+    text-align: center;
+    
+   
+    font-size: 18px;
+    align-self: center;
+}
+#formBuscarTreino{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#bodyTreino{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    background-image: url('https://img.freepik.com/fotos-gratis/mulher-com-abdomen-visivel-fazendo-fitness_23-2150228900.jpg?t=st=1719593941~exp=1719597541~hmac=8ec44249cc0803da00a5718cdbecbd1943ef8a99e1eace22807c43a5d905bdeb&w=996');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#btnTreino{
+    margin: 5px;
+}
+
+#btnTreino a{
+    color: white;
+    text-decoration: none;
+}
