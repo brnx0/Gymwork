@@ -13,3 +13,12 @@ async function buscaCep(){
     document.getElementsByName('bairro')[0].value = jsonCep["bairro"]
     console.log(jsonCep)
 }
+
+function nomeTreino(){
+    var nomeTreino = ["A", "B", "C"]
+    let treinos = document.getElementsByName("treino")
+    for (let i =0 ; i<treinos.length; i++){
+        treinos[i].innerText = nomeTreino[i];
+        console.log(treinos[i].innerText)
+    }
+}

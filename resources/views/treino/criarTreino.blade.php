@@ -3,7 +3,7 @@
 @section('content')
     <form action="/treino" method="post">@csrf
         <div>
-            <label for="aluno">Aluno:</label>
+            <label for="aluno"><h5>Aluno:</h5></label>
             <select name="idAluno" id="aluno" class="form-select">
                 @foreach ($queryAluno as $value)
                     <option value="{{$value->id}}"> {{$value->nome}}</option>
@@ -11,10 +11,13 @@
             </select>
         </div>
         <div>
-            <P>Treinos:</P>
+            <h5>Treinos:</h5>
             @include('treino.treinoA')
         </div>
-       <input type="submit" value="Salvar">
+        <div>
+            <input type="submit" value="Salvar" class="btn btn-success">
+        </div>
+       
     </form>
 
 @endsection

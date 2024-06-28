@@ -1,11 +1,18 @@
-
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
 <body>
-    <table  class="table-primary" style="font-size: 8px">
+    <header>
+        <p>Academia G-Fit</p>
+        <p>Ficha de treino</p>
+    </header>
+  
+    <table  class="table table-striped" style="font-size: 6px">
         <thead>
             <tr>
-                <th>Exercicio</th>
-                <th>Carga</th>
-                <th>Repetição</th>
+                <th scope="col">Exercicio</th>
+                <th scope="col" >Carga</th>
+                <th scope="col" >Repetição</th>
             </tr>
         </thead>
         <tbody>
@@ -13,8 +20,8 @@
                 @foreach ($exercicios as $exercicio)
                     <tr>
                         <td>{{$exercicio}}</td>
-                        <td></td>
-                        <td></td>
+                        <td>8/10</td>
+                        <td>3/12</td>
                     </tr>
                   
                 @endforeach

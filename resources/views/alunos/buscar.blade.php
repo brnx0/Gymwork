@@ -11,9 +11,10 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <td>Nome</td>
-            <td>Tel</td>
-            <td>CEP</td>
+            <th>Nome</th>
+            <th>Tel</th>
+            <th>CEP</th>
+            <th>Ação</th>
         </tr>
         <tbody>
             @foreach ($dados as $key => $value)
