@@ -21,3 +21,4 @@ Route::get('/consultar', function () {return view('treino.consultarTreino');});
 Route::post('/consultar', [TreinoController::class, 'consultarTreino']);
 
 Route::get('/treino/imprimir/{aluno}/{treino}', [TreinoController::class, 'imprimirTreino']);
+

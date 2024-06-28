@@ -8,12 +8,12 @@ use Dompdf\Dompdf;
 
 class pdfController extends Controller{
     
-    public  function pdf($dados){
-
-    $gerarPdf = Pdf::loadView('treino.imprimirTreino', ['dados' => $dados]);
-    $gerarPdf->setPaper('A8');
-    $gerarPdf->render();
-    return $gerarPdf->stream();
     
+    public  function pdf($dados){
+        $treino = $dados;
+        $gerarPdf = Pdf::loadView('treino.imprimirTreino',compact('treino'));
+        $gerarPdf->setPaper('A4');
+        $gerarPdf->render();
+        return $gerarPdf->stream("Nome.pdf");
     }
-    }
+}

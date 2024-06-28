@@ -3,9 +3,12 @@
 </form>
 
 @if (isset($queryTreino))
-    @for ($i = 1; $i <= count($queryTreino); $i++)
+
+
+
+    @for ($i = 1; $i <= 3 ; $i++)
         <button>
-            <a href="localhost/treino/imprimir/{{$i}}/{} target="_blank" rel="noopener noreferrer">{{$i}}</a>
+            <a href="http://localhost:8000/treino/imprimir/{{$queryTreino["idAluno"]}}/{{$i}}" target="_blank" rel="noopener noreferrer">{{$i}}</a>
         </button>
     @endfor 
         
@@ -19,7 +22,7 @@
   
     <tbody>
        
-        @foreach ( $queryTreino; as $treino => $exercicios) 
+        {{-- @foreach ( $queryTreino; as $treino => $exercicios) 
            "Exercícios do {{$treino}}:<br>";
             @if (is_array($exercicios)) 
                 @foreach ($exercicios as $exercicio) 
@@ -31,7 +34,7 @@
                 
             @endif
         @endforeach
-       
+        --}}
         
     </tbody>
     

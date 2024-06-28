@@ -30,16 +30,26 @@ class TreinoController extends Controller{
 
     public function consultarTreino(Request $request){
         $cpfAluno = TreinoController::buscarAluno($request->consultar);
-        $queryTreino = Treino::select('treinoA','treinoB','treinoC')->where('idAluno', $cpfAluno[0]->id)->get();
+        $queryTreino = Treino::select('idTreinos', 'idAluno')->where('idAluno', $cpfAluno[0]->id)->get();
         return view('treino.consultarTreino', ['queryTreino' => json_decode($queryTreino[0],true)]);
     }
     public function imprimirTreino($iDaluno, $treino){
-        $aluno = TreinoController::buscarAluno($iDaluno);
-        // $treino  = Treino::select('treinoA')->where('idAluno', $aluno->id)->get();
-        return redirect('/')->with('msg',$aluno);
+        if($treino == 1){
+           $treino = "treinoA"; 
+        }elseif($treino == 2){
+            $treino = "treinoB"; 
+        }elseif($treino == 3 ){
+            $treino = "treinoC"; 
+        }
+        else{
+            return redirect('/')->with('msg', 'Treino Ainda não cadastrado');
+        }
+        $treino  = Treino::select($treino)->where('idAluno', $iDaluno)->get();
+        $treino = json_decode($treino[0], true);
         
-        // $gerarPDF = new pdfController();
-        // $gerarPDF->pdf($treino);
+        $gerarPdf = Pdf::loadView('treino.imprimirTreino',compact('treino'));
+        $gerarPdf->setPaper('A4');
+        $gerarPdf->render();
+        return $gerarPdf->stream("Nome.pdf");
     }
-
 }
