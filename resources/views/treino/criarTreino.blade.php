@@ -10,9 +10,9 @@
                 @endforeach
             </select>
         </div>
-        <div>
+        <div id="criarTreino">
             <h5>Treinos:</h5>
-            @include('treino.treinoA')
+            @include('treino.treinos')
         </div>
         <div>
             <input type="submit" value="Salvar" class="btn btn-success">

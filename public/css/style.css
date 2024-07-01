@@ -1,6 +1,10 @@
 @import url(./fonts.css);
 
-
+.btn-primary{
+    margin: 0px 15px;
+    height: 37px;
+    
+}
 .bgColor{
     background: white;
     font-family: fontPrincipal !important;
@@ -22,9 +26,16 @@ form p {
     color: black;
 
 }
+#formCreateAluno input{
+    border: 1px solid rgba(0, 0, 0, 0.314);
+}
 
 #aluno{
     width: 20%; 
+}
+
+.form-check-input{
+    border:1px solid black !important;
 }
 /* Criar Treino*/
 #formCreateTreino{
@@ -32,6 +43,9 @@ form p {
 }
 #formCreateTreino div {
     padding-bottom: 10px;
+}
+#criarTreino{
+    display:flex;
 }
 
 

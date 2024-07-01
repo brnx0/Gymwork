@@ -14,14 +14,26 @@ class TreinoController extends Controller{
     }
 
     public function store(Request $request){
+      
         $treino = new Treino;
         $treino->idAluno = $request->idAluno;
-        $treino->treinoA = $request->treinoA;
-        isset($request->treinoA)?:$treino->treinoA = $request->treinoA;
-        isset($request->treinoB)?:$treino->treinoB = $request->treinoB;
-        isset($request->treinoC)?:$treino->treinoC = $request->treinoC;
+        $treino->treinoA = $request->treinoA ?? $treino->treinoA;
+        $treino->treinoB = $request->treinoB ?? $request->treinoB;
+        $treino->treinoC = $request->treinoC ?? $request->treinoC;
         $treino->save();
         return redirect('/')->with('msg', 'Treino Cadastrado');
+    }
+    public function verificarDuplicidade(Request $request ){
+        $retorno = Treino::findOrFail('idAluno', $request->idAluno);
+        if($retorno){
+            return TreinoController::update($request);
+        }else{
+            return TreinoController::store($request);
+        }
+        
+    }
+    public function update(){
+
     }
     public function buscarAluno($cpf){
        $query =  Alunos::select('id')->where('cpf', $cpf)->get();

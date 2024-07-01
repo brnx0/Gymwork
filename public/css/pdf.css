@@ -1,0 +1,23 @@
+@page { margin: 1rem 0.5rem;  }
+header{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid black
+}
+header p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+table {
+    padding-top:5px
+}
+table thead tr{
+    margin-bottom: 5px
+}
+#indice{
+    padding-bottom: 5px
+}
+.valores{
+    padding-bottom: 3px
+}
