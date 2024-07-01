@@ -11,10 +11,10 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Nome</th>
-            <th>Tel</th>
-            <th>CEP</th>
-            <th>Ação</th>
+            <th  scope="col" ><h5> Nome </h5></th>
+            <th  scope="col"><h5> Tel </h5></th>
+            <th  scope="col" ><h5> CEP </h5></th>
+            <th  scope="col" ><h5> Ação </h5></th>
         </tr>
         <tbody>
             @foreach ($dados as $key => $value)
