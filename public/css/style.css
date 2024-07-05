@@ -51,10 +51,11 @@ form p {
 
 /*Buscar Treino*/
 #buscar{
-    height: 33px;
+    border-color: #00000085;
     border-radius: 56px;
-    
+    text-align: center;
     font-size: 24px;
+    width: 16%;
     
 }
 #buscar::placeholder{
@@ -74,7 +75,7 @@ form p {
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    background-image: url('https://img.freepik.com/fotos-gratis/mulher-com-abdomen-visivel-fazendo-fitness_23-2150228900.jpg?t=st=1719593941~exp=1719597541~hmac=8ec44249cc0803da00a5718cdbecbd1943ef8a99e1eace22807c43a5d905bdeb&w=996');
+    background-image: url('../assets/img/background.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
 }

@@ -12,7 +12,10 @@
 		<nav class="navbar navbar-expand-lg ">
 			<div class="container-fluid">
 			  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav">     									
+				<ul class="navbar-nav">   
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>  									
 				  <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 					  Cadastro		
@@ -37,6 +40,9 @@
 				  <li class="nav-item">
 					<a class="nav-link" href="/treino">Criar Treino </a>
 				  </li>
+                  <li class="nav-item">
+                        <a class="nav-link" href="/consultar">Consultar </a>
+                  </li>
 				</ul>
 			  </div>
 			</div>
@@ -47,7 +53,11 @@
 		  </section>
 			
 		 
-	   
+	   <footer>
+        @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
+        Usuario: {{Auth::user()->currentTeam->name}}
+        @endif
+    </footer>
 	</body>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
