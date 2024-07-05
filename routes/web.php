@@ -23,7 +23,7 @@ Route::post('/consultar', [TreinoController::class, 'consultarTreino']);
 Route::get('/treino/imprimir/{aluno}/{treino}', [TreinoController::class, 'imprimirTreino']);
 
 
-Route::middleware([
+Route::middleware([ 
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
