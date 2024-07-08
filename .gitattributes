@@ -1,5 +1,5 @@
 * text=auto eol=lf
-
+*.js diff=javascript
 *.blade.php diff=html
 *.css diff=css
 *.html diff=html
